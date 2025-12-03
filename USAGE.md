@@ -1,5 +1,23 @@
 # Focus Session Watcher - Usage Guide
 
+## Initial Setup
+
+### Import Required Shortcuts
+
+Before using the watcher, import these shortcuts by clicking the links and adding them to your Shortcuts app:
+
+1. **[focus-session--script_macos](https://www.icloud.com/shortcuts/1ec30ee610c14db68af3621971000993)** - Click and add to Shortcuts
+2. **[focus-session--script-alert_macos](https://www.icloud.com/shortcuts/55c84ca1e2494e5598dd1201f83c03b2)** - Click and add to Shortcuts
+3. (Optional) **[focus-session--script-status_macos](https://www.icloud.com/shortcuts/fa0f9e41125b499b8fe74705109b0d6d)** - For viewing session status
+
+After importing, restart the watcher:
+```bash
+kill $(pgrep -f watch_inactivity_simple)
+# Wait 2 seconds for LaunchAgent to auto-restart
+```
+
+---
+
 ## Quick Reference
 
 ### Check Status

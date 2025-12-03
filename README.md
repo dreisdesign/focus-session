@@ -4,6 +4,8 @@ A lightweight, minimalist macOS automation tool that monitors your activity and 
 
 **Perfect for**: Boosting productivity, tracking focus time, and maintaining healthy work breaks.
 
+**📚 Full Documentation**: [README](README.md) • [Usage Guide](USAGE.md) • [Shortcuts Setup](SHORTCUTS.md) • [Troubleshooting](TROUBLESHOOTING.md) • [Security Audit](SECURITY.md)
+
 ---
 
 ## ✨ Features
@@ -24,6 +26,7 @@ A lightweight, minimalist macOS automation tool that monitors your activity and 
 - **macOS** 10.15+ (Catalina or later)
 - **Shortcuts app** (built-in on macOS)
 - **zsh** (default shell on macOS 10.15+)
+- **iCloud Shortcuts access** - Required to import public shortcuts for alerts
 - **No external dependencies** - Uses only built-in macOS tools
 
 ---
@@ -56,13 +59,22 @@ This will:
 - Copy scripts to `~/Library/Application Support/focus-session/`
 - Install LaunchAgent for automatic startup
 - Make scripts executable
-- Open Shortcuts app to import the alert Shortcut
 
-### 3. Import Shortcut
+### 3. Import Shortcuts
 
-When the Shortcuts app opens:
-1. Drag the `Shortcuts/script_mac--inactivity_shared.shortcut` file into Shortcuts
-2. Or manually import: File → Open → select the `.shortcut` file
+You need to import 3 shortcuts. Click the links below and click "Add Shortcut" in each:
+
+**Required:**
+1. **[focus-session--script_macos](https://www.icloud.com/shortcuts/1ec30ee610c14db68af3621971000993)** - Main watcher integration
+2. **[focus-session--script-alert_macos](https://www.icloud.com/shortcuts/55c84ca1e2494e5598dd1201f83c03b2)** - Start/end alerts and screen lock
+
+**Optional (for log status):**
+3. **[focus-session--script-status_macos](https://www.icloud.com/shortcuts/fa0f9e41125b499b8fe74705109b0d6d)** - View session status
+
+**Manual Import Alternative:**
+If the links don't work, use the `.shortcut` files in the `Shortcuts/` folder:
+1. Open macOS Shortcuts app
+2. File → Open → select the `.shortcut` file
 3. Click "Add" when prompted
 
 ### 4. Verify Installation
