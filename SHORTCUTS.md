@@ -105,7 +105,39 @@ If the shortcuts aren't showing, try:
 
 ---
 
-## 📝 What's in Each Shortcut
+## 📋 Shortcut Details & Settings
+
+### Privacy & Security Configuration
+
+All shortcuts are configured with:
+- ✅ **Ask When Run**: Disabled (required for automation)
+- ✅ **Require Approval**: No
+- ✅ **Share Over Cellular**: Disabled
+- ✅ **Run in Background**: Enabled
+- ✅ **Security**: Local files only, no network access
+
+### Customization Options
+
+#### Alerts (in focus-session--script-alert_macos)
+- Notification sound: ✅ Enabled
+- Notification style: Alert (banner)
+- Auto-lock screen: ✅ Enabled (can be toggled in shortcut settings)
+
+#### Status Check (in focus-session--script-status_macos)
+- Display type: Popup alert
+- Show countdown: ✅ Yes
+- Refresh interval: Reads current file (live)
+
+### Permissions Required
+
+Your shortcuts need:
+- ✅ **Notification permission** (auto-granted on import)
+- ✅ **Read/write to home directory** (auto-granted)
+- ✅ **Shortcut runner permission** (user enables once in System Preferences)
+
+**No special macOS permissions required!** No Full Disk Access, Accessibility permission, or other elevated privileges needed.
+
+---
 
 ### focus-session--script_macos
 ```
@@ -140,15 +172,36 @@ Input: None (triggered on-demand)
 
 ## 🔐 Privacy & Security
 
-These shortcuts:
-- ✅ Are completely open-source and visible
-- ✅ Have comments linking to GitHub for transparency
-- ✅ Don't collect any data
-- ✅ Don't make network calls
-- ✅ Only interact with your local system
-- ✅ Are fully under your control
+### What We Collect
+- ✅ **Nothing** - Zero data collection
+- ✅ No analytics or tracking
+- ✅ No telemetry or crash reporting
+- ✅ No third-party integrations
 
-**View the shortcuts** by opening them in Shortcuts app to verify they're safe!
+### What Shortcuts Can Access
+- Read/write your focus session logs (local only)
+- Display notifications (standard macOS feature)
+- Lock your screen (you requested this)
+- Read system idle time (public HID info)
+
+### What Shortcuts CANNOT Access
+- ❌ Your files outside focus-session directories
+- ❌ Camera, microphone, or location
+- ❌ Contacts, calendar, or messages
+- ❌ Network or internet
+- ❌ Other apps' data
+
+### Transparency & Auditing
+These shortcuts:
+- ✅ Are completely visible and auditable in the Shortcuts app
+- ✅ Have descriptive comments linking to GitHub for full transparency
+- ✅ Are open-source (MIT License) - you can inspect the logic
+- ✅ Run locally on your machine only
+- ✅ Don't communicate with external servers
+
+**View the shortcuts** by opening them in Shortcuts app to see exactly what they do!
+
+---
 
 ---
 

@@ -241,7 +241,30 @@ Each daily CSV contains:
 
 ---
 
-## 🔧 Troubleshooting
+## 🔒 Privacy & Security
+
+### Zero Data Collection
+- ✅ **No tracking or analytics** - Your activity data never leaves your machine
+- ✅ **No telemetry** - We don't monitor usage patterns
+- ✅ **No cloud sync** - Everything stays local
+- ✅ **No third-party integrations** - Only uses built-in macOS tools
+- ✅ **Open source** - Full transparency, MIT License
+
+### Minimal Permissions Required
+- ✅ Notification permission (standard, auto-granted)
+- ✅ Read/write to your home directory (for logs)
+- ❌ No Full Disk Access
+- ❌ No Accessibility permission
+- ❌ No network access
+
+### Complete Audit Trail
+- 📖 See [SECURITY.md](SECURITY.md) for full security audit
+- 📋 See [SHORTCUTS.md](SHORTCUTS.md) for shortcut details and permissions
+- 🔍 Source code is visible and auditable on GitHub
+
+**Your focus sessions are private, secure, and under your complete control.**
+
+---
 
 ### Watcher Not Starting
 

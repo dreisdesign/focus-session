@@ -16,6 +16,22 @@ kill $(pgrep -f watch_inactivity_simple)
 # Wait 2 seconds for LaunchAgent to auto-restart
 ```
 
+### Permissions & First Run
+
+On first run, you may see permission dialogs:
+
+1. **"Allow Shortcuts to control your Mac?"** → Click "Allow"
+   - This enables running shortcuts from the watcher script
+   - Safe: Shortcuts can only run shortcuts in your library
+
+2. **Notification permission** → Auto-approved during import
+   - Allows sending session notifications
+
+3. **System Preferences → Security & Privacy**
+   - Verify "Run Shell Scripts" is enabled (usually is by default)
+
+**That's it!** No special permissions like Full Disk Access needed.
+
 ---
 
 ## Quick Reference
