@@ -1,0 +1,54 @@
+# Focus Session Watcher - Git Ignore
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+*~
+.vscode
+.idea
+
+# Logs (don't commit local logs)
+*.log
+*.log.gz
+*.pid
+.lock
+
+# User data
+focus-session-*.csv
+focus-session-*.json
+
+# Archives
+*.zip
+*.tar.gz
+*.tar
+
+# Editor backups
+*.bak
+*.backup
+*~
+
+# Build artifacts
+/build
+/dist
+
+# Dependencies (if you add any)
+node_modules/
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Testing
+test-config.sh
+test-output/
+
+# Temporary
+/tmp
+/temp
+.cache

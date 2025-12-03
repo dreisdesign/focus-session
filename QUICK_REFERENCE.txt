@@ -1,0 +1,45 @@
+# QUICK REFERENCE CARD
+
+## Installation
+```bash
+unzip focus-session-installer.zip    # or: git clone ...
+cd focus-session-installer
+bash install.sh
+```
+
+## Basic Commands
+```bash
+cat ~/focus-session-status.txt                    # Check countdown
+bash ~/Lib*/Appl*/focus-session/installer/focus_session.sh active-session  # Detailed status
+tail -f /tmp/watch_inactivity_simple.log          # Watch logs live
+bash uninstall.sh                                 # Uninstall
+```
+
+## Customize
+**Edit**: `~/Library/Application Support/focus-session/installer/watch_inactivity_simple.sh`
+
+- Line ~46: `SESSION_SECONDS=1500` → Change to your duration (e.g., 300 for 5 min)
+- Line ~10: `IDLE_THRESHOLD=120` → Change to your threshold (e.g., 30 seconds)
+- **Then restart**: `launchctl unload ~/Library/LaunchAgents/com.user.watch_inactivity_simple.plist && launchctl load ~/Library/LaunchAgents/com.user.watch_inactivity_simple.plist`
+
+## Troubleshooting
+- Not running: `launchctl load ~/Library/LaunchAgents/com.user.watch_inactivity_simple.plist`
+- Stale locks: `rm -rf /tmp/watch_inactivity_simple.lock /tmp/watch_inactivity_simple.pid`
+- Errors: `cat /tmp/watch_inactivity_simple.launch.err.log`
+- See **TROUBLESHOOTING.md** for 12+ issues
+
+## Files
+- **Logs**: `/tmp/watch_inactivity_simple.log` (live), `~/Library/Logs/focus-session/` (archives)
+- **Status**: `~/focus-session-status.txt` (MM:SS format)
+- **Config**: `~/Library/Application Support/focus-session/installer/`
+- **Data**: `~/Library/Logs/focus-session/focus-session-*.csv`
+
+## Documentation
+- **README.md** - Start here
+- **USAGE.md** - Detailed examples
+- **TROUBLESHOOTING.md** - Common issues
+- **DEPLOYMENT.md** - How to share
+
+---
+
+**Need help? See TROUBLESHOOTING.md or check logs!**
